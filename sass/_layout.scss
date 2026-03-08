@@ -41,6 +41,8 @@
   &__link-item {
     position: relative;
     text-decoration: none;
+    color: #000;
+    font-weight: 600;
   }
   // 1. Define the base state of the underline
   &__link-item::after {
@@ -54,7 +56,7 @@
     background-color: #ff6f24;
     transform: scaleX(0); // Hidden by default
     transition: transform 0.2s ease-out;
-    transform-origin: bottom-left;
+    transform-origin: left;
   }
 
   // 2. Trigger the change when the LINK ITEM is hovered
