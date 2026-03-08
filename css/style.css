@@ -90,11 +90,46 @@ html {
   width: 2rem;
 }
 
+/* 
 .introduction {
   height: 90%;
   width: 100%;
+
   margin-top: -3rem;
   display: flex;
+
+  &__text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__text-1 {
+      font-size: 80px; /* Large, impactful size 
+      font-weight: 500;
+      line-height: 1.1; /* Tight line height like the image 
+      letter-spacing: -0.04em; /* Tightening the letters 
+      color: #000000;
+      margin: 0;
+    }
+
+    &__text-2 {
+    }
+    &__text-3 {
+    }
+  }
+  &__image {
+    flex: 1;
+    background-color: red;
+  }
+}
+
+  */
+.introduction {
+  display: flex;
+  align-items: center; /* Vertically centers the text vs the red box */
+  height: 80vh; /* Gives the section some height to breathe */
 }
 .introduction__text {
   flex: 1;
@@ -103,13 +138,27 @@ html {
   flex-direction: column;
   justify-content: center;
 }
-.introduction__text__text-1 {
-  font-size: 3rem;
-  background-color: #000;
+.introduction__text-1 {
+  font-size: 5rem;
+  font-weight: 800; /* Increased weight to match your original goal */
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+  text-transform: capitalize; /* Optional: makes it look more like a header */
+  margin-bottom: 8rem;
+}
+.introduction__text-2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333333;
+  margin-bottom: 2.5rem;
 }
 .introduction__image {
-  background-color: #000;
   flex: 1;
+  height: 100%;
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
