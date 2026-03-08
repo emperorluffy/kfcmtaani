@@ -40,22 +40,31 @@
   }
   &__link-item {
     position: relative;
+    text-decoration: none;
   }
-  &__link-item::before {
+  // 1. Define the base state of the underline
+  &__link-item::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background-color: #f6b400;
-    transform: scaleY(0);
-    transform-origin: top;
-
-    transition: transform 1s;
-  }
-  &__link-item:hover::before {
-    transform: scaleY(1);
+    display: block;
     width: 100%;
+    height: 3.5px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff6f24;
+    transform: scaleX(0); // Hidden by default
+    transition: transform 0.2s ease-out;
+    transform-origin: bottom-left;
+  }
+
+  // 2. Trigger the change when the LINK ITEM is hovered
+  &__link-item:hover::after,
+  &__link-item:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom-right; // Creates the 'slide out' effect
+  }
+  &__link-item--active::after {
+    transform: scaleX(1); // Set it to full width
+    transform-origin: bottom-right; // Make sure it uses the same origin as hover
   }
 }
