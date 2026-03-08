@@ -69,4 +69,37 @@
     transform: scaleX(1); // Set it to full width
     transform-origin: bottom-right; // Make sure it uses the same origin as hover
   }
+  &__img-box {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+.introduction {
+  height: 90%;
+  width: 100%;
+
+  margin-top: -3rem;
+  display: flex;
+
+  &__text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__text-1 {
+      font-size: 3rem;
+
+      background-color: #000;
+    }
+    &__text-2 {
+    }
+    &__text-3 {
+    }
+  }
+  &__image {
+    background-color: #000;
+    flex: 1;
+  }
 }
