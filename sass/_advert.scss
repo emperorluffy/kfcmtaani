@@ -1,0 +1,52 @@
+.advert {
+  background-color: #f3b12d; // Your project's yellow/orange
+  padding: 6rem 10%;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    max-width: 400px;
+  }
+
+  &__stores {
+    display: flex;
+    gap: 1.5rem;
+
+    img {
+      height: 45px; // Keeps store badges consistent
+      width: auto;
+    }
+  }
+
+  &__visuals {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  &__phone {
+    width: 100%; // Increased width since the new image contains both phones
+    height: 100%;
+    box-shadow: 0 0 20px 20px #f3b12d;
+
+    // Remove the &--1 and &--2 blocks as they are no longer needed
+  }
+}
