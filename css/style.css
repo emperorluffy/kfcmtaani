@@ -428,64 +428,70 @@ html {
 }
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2rem;
+  background-color: #e9edeb;
+  padding: 5rem 2rem;
 }
-
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1140px;
+  margin: 0 auto;
+}
 .footer__logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1rem;
 }
-
-.footer__logo-img {
-  height: 50px; /* Adjust based on your text size */
-  width: auto;
-}
-
 .footer__logo-text {
-  font-family: "Arial Black", sans-serif;
-  font-size: 2.2rem;
-  font-weight: 900;
-  font-style: italic;
-  color: #333333; /* Dark grey for "BUR" */
-  line-height: 1;
+  font-size: 3rem;
+  font-weight: 800;
   text-transform: uppercase;
 }
-
-/* Directly targets the span tag for the color change */
 .footer__logo-text span {
-  color: #f2b72c; /* The golden-yellow for "GER" */
-}
-
-.footer__content {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 2rem 0;
-  text-transform: uppercase;
+  color: #f2b02e;
 }
 .footer__content-header {
-  margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
 }
-.footer__content-header-text {
+.footer__content-text .footer__list {
+  list-style: none;
+}
+.footer__content-text .footer__list li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+.footer__content-text .footer__list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+.footer__content-text .footer__list a:hover {
+  color: #f2b02e;
+}
+.footer__newsletter-form {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 1rem;
 }
-
-.footer__list li:not(:last-child) {
-  margin-bottom: 10px;
+.footer__input {
+  padding: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  width: 200px;
 }
-
-.footer__list li {
-  font-size: 1.5rem;
-  font-weight: 500;
+.footer__btn {
+  padding: 1.2rem 2rem;
+  background-color: #f2b02e;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.footer__btn:hover {
+  background-color: rgb(240.5067567568, 166.9256756757, 21.9932432432);
 }
 
 /*# sourceMappingURL=style.css.map */

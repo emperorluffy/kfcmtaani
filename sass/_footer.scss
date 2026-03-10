@@ -1,57 +1,85 @@
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
+  background-color: #e9edeb;
+  padding: 5rem 2rem;
 
-.footer__logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 
-.footer__logo-img {
-  height: 50px; /* Adjust based on your text size */
-  width: auto;
-}
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-.footer__logo-text {
-  font-family: "Arial Black", sans-serif;
-  font-size: 2.2rem;
-  font-weight: 900;
-  font-style: italic;
-  color: #333333; /* Dark grey for "BUR" */
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-/* Directly targets the span tag for the color change */
-.footer__logo-text span {
-  color: #f2b72c; /* The golden-yellow for "GER" */
-}
-.footer__content {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 2rem 0;
-  text-transform: uppercase;
-  &-header {
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    padding: 1rem 0;
     &-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      span {
+        color: #f2b02e;
+      }
     }
   }
-}
-.footer__list li:not(:last-child) {
-  margin-bottom: 10px;
-}
-.footer__list li {
-  font-size: 1.5rem;
-  font-weight: 500;
+
+  &__content {
+    &-header {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-transform: capitalize; // Matches your "Sitemap" casing
+    }
+
+    &-text {
+      .footer__list {
+        list-style: none;
+
+        li:not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-size: 1.4rem;
+          transition: all 0.2s;
+
+          &:hover {
+            color: #f2b02e;
+          }
+        }
+      }
+    }
+  }
+
+  &__newsletter {
+    &-form {
+      display: flex;
+      margin-top: 1rem;
+    }
+  }
+
+  &__input {
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+  }
+
+  &__btn {
+    padding: 1.2rem 2rem;
+    background-color: #f2b02e;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#f2b02e, 5%);
+    }
+  }
 }
