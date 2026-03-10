@@ -427,4 +427,65 @@ html {
   box-shadow: 0 0 20px 20px #f3b12d;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__logo-img {
+  height: 50px; /* Adjust based on your text size */
+  width: auto;
+}
+
+.footer__logo-text {
+  font-family: "Arial Black", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #333333; /* Dark grey for "BUR" */
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Directly targets the span tag for the color change */
+.footer__logo-text span {
+  color: #f2b72c; /* The golden-yellow for "GER" */
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+.footer__content-header {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.footer__content-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer__list li {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=style.css.map */
