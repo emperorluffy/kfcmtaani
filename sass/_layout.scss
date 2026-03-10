@@ -3,7 +3,7 @@
 }
 
 .header {
-  height: 105vh;
+  height: 110vh;
   background-image: linear-gradient(110deg, #ffffff 50%, #f9b228 50%);
   background: cover;
 }
@@ -121,7 +121,6 @@
 .introduction {
   display: flex;
   align-items: center; /* Vertically centers the text vs the red box */
-  height: 80vh; /* Gives the section some height to breathe */
 
   &__text {
     flex: 1;
@@ -189,4 +188,166 @@
 
 .btn:hover {
   background-color: #e5a110;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  gap: 20px; /* Added this so your cards aren't touching */
+  height: 90vh;
+  background-color: #e6ede2;
+
+  &__card {
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0 4px 12px 0 rgba(125, 78, 78, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    border: 2px solid #7d4e4e;
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    &:hover {
+      // 2. The Animation: Lift the card up
+      transform: translateY(-2rem);
+
+      // 3. Update the shadow to match the lift
+      box-shadow: 0 1.5rem 3rem rgba(125, 78, 78, 0.2);
+
+      transition: all 0.2s;
+    }
+    &-icon-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    &-icon {
+      height: 5rem;
+      width: 5rem;
+      display: block;
+      fill: #f3af31;
+      margin-bottom: 2.5rem; // Pushes the heading down from the icon
+    }
+    &-heading {
+      margin-bottom: 1.5rem; // Pushes the text down from the heading
+      font-size: 2.4rem; // Adjust based on your root font-size
+      font-weight: 700; // Bold weight
+      color: #7d4e4e; // Matches the border color from your design
+      text-transform: capitalize; // Ensures "Quality Burgers" is properly cased
+      line-height: 1.2;
+    }
+    &-text {
+      font-size: 1.6rem;
+      line-height: 1.6; // Adds "breathing room" between lines of text
+      max-width: 85%;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  min-height: 250vh;
+
+  &__text {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 3rem;
+
+    span {
+      color: #f3af31;
+      margin-left: 8px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    padding: 4rem;
+    &--card {
+      border-radius: 40px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 70rem;
+      margin: 0;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+      }
+      &-header {
+        color: #4a1111; // Deep burgundy color
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+      }
+      &-text {
+        color: #666;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+      }
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        width: 100%; /* Add this to ensure it spans the full width of the card */
+        box-sizing: border-box; /* Ensures padding doesn't break the width */
+      }
+
+      .price-tag {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+
+      /* Cart Button Styling */
+      .cart-action-btn {
+        background-color: #e2ede8; /* Mint background */
+        border: none;
+        border-radius: 14px;
+        width: 65px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+      }
+
+      .cart-action-btn:hover {
+        background-color: #d4e5dc;
+      }
+
+      /* Cart SVG Icon */
+      .cart-icon {
+        display: block;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: #3a4d44; /* Darker tone of the mint for contrast */
+      }
+    }
+  }
 }
